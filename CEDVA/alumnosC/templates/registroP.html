@@ -1,0 +1,31 @@
+{%extends 'inicioA.html'%}
+{% load static %}
+{%block content%}
+<br>
+<br>
+<div class="container" align="center">
+  <br>
+  <div class="card">
+    <div class="card-header" style="text-align: left;">
+      Pagos por Periodo
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="card-body">
+        <form method="POST" action="">
+          {% csrf_token %}
+          <input type="hidden" name="alumnoco" id="alumnoco" value="{{user.id }}" name="">
+
+
+          <label>{{user.id }}</label>
+           {{PAgoAForm}}
+          <div align="center">
+            <br>
+            <button type="button" onclick="location.href='pagoalumno'" class="previous action-button btn-secondary" aria-controls="nav-home-tab" >Cancelar</button> 
+            <button type="submit" name="submit"  id="submit" class="submit action-button btn-primary" aria-controls="nav-profileD-tab">Aceptar</button> 
+          </div>
+        </div>
+      </div>
+    </form>   
+  </div>
+</div>
+{%endblock%}
